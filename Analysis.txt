@@ -1,0 +1,11 @@
+"" Big O Notation ""
+
+Task0.py = O(4)
+
+Task1.py = O(5n+1)
+
+Task2.py = O(2n+2)
+
+Taks3.py -> Part 1 = O(4n+1), Part 2 = O(2n+3)
+
+Taks4.py = O(5n+2)
