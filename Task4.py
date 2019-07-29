@@ -25,13 +25,12 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
-telemarketers = []
+telemarketers = set()
 
 
 for row in calls:
     
-    telemarketers.append(row[0])
-
+    telemarketers.add(row[0])
 
 for row in calls:
     
@@ -49,12 +48,5 @@ for row in texts:
         
         telemarketers.remove(row[1])
 
-final_list = []
 
-for row in telemarketers:
-    
-    if not row in final_list:
-        
-        final_list.append(row)
-        
-print(f"These numbers could be telemarketers:{sorted(final_list)}")  
+print(f"These numbers could be telemarketers:{sorted(telemarketers)}")  

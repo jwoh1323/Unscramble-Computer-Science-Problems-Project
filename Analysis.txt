@@ -2,10 +2,10 @@
 
 Task0.py = O(4)
 
-Task1.py = O(5n+1)
+Task1.py = O(6n+2)
 
-Task2.py = O(2n+2)
+Task2.py = O(5n+4)
 
-Taks3.py -> Part 1 = O(4n+1), Part 2 = O(2n+3)
+Taks3.py -> Part 1 = O(4n+2), Part 2 = O(4n+4)
 
-Taks4.py = O(5n+2)
+Taks4.py = O(7n+2)

@@ -46,17 +46,18 @@ The percentage should have 2 decimal digits
 
 """ Part A: """
 
-area_code = []
+area_code = set()
 
 
 for row in calls:
-    extraction = row[0].split()
-    extraction = extraction[0].split(")")[0] 
-    extraction = extraction.replace("(","")
-    
-    if not extraction in area_code:
-        area_code.append(extraction)
-        
+    if row[0].startswith("(080)"):
+        if row[1].startswith("("):
+            area_code.add(row[1].split("(", 1)[1].split(")", 1)[0])
+        elif  row[1].startswith("7") or row[1].startswith("8") or row[1].startswith("9"):
+            area_code.add(row[1].split()[0][:4])
+        elif row[1].startswith("140"):
+            area_code.add(row[1])
+
 print(f"The numbers called by people in Bangalore have codes: {sorted(area_code)}")
 
 """ Part B: """

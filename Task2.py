@@ -20,11 +20,22 @@ Print a message:
 September 2016.".
 """
 
-greatest = 0
+g_number = {}
 
 for row in calls:
-    if int(row[3]) > greatest:
-        greatest = int(row[3])
-        g_number = row[0]
+    if row[0] in g_number:
+        g_number[row[0]] += int(row[3])
+    
+    else:
+        g_number[row[0]] = int(row[3])
+    
+    if row[1] in g_number:
+        g_number[row[1]] += int(row[3])
+    
+    else:
+        g_number[row[1]] = int(row[3])
 
-print(f"{g_number} spent the longest time, {greatest} seconds, on the phone during September 2016.")
+max_value = max(g_number.values()) 
+max_keys = [k for k, v in g_number.items() if v == max_value]
+
+print(f"{max_keys} spent the longest time, {max_value} seconds, on the phone during September 2016.")
