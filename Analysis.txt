@@ -1,11 +1,22 @@
 "" Big O Notation ""
 
-Task0.py = O(4)
+""contants were dropped and the notation has been simplified.""
 
-Task1.py = O(6n+2)
+Task0.py = O(1)
+-> two print statements that run only one time
 
-Task2.py = O(5n+4)
+Task1.py = O(n)
+-> two for loop, which is the interation. since I changed 'containtment' to 'add', now it should be O(n). 
 
-Taks3.py -> Part 1 = O(4n+2), Part 2 = O(4n+4)
 
-Taks4.py = O(7n+2)
+Task2.py = O(n^2)
+-> two for loop and 1 loop has containtment inside, therefore, it should be O(n^2)
+
+Taks3.py -> Part 1 = O(n + nlogn), Part 2 = O(n^3 + n^2)
+
+Part1 -> two for loop with add function, also, it has sorted function at the end, therefore, O(n + nlogn)
+Part2 -> one for loop has find, which I believe check function so it's n^2, the other loop has the check and interation insider so it's n^3.
+
+
+Taks4.py = O(n + nlogn)
+-> three for loop with each has add & dicard funtion, and it has sort function at the end, therefor, O(n + nlogn)

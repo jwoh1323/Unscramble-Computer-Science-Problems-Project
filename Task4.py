@@ -36,17 +36,19 @@ for row in calls:
     
     if row[1] in telemarketers:
         
-        telemarketers.remove(row[1])
+        telemarketers.discard(row[1])
         
 for row in texts:
     
     if row[0] in telemarketers:
         
-        telemarketers.remove(row[0])
+        telemarketers.discard(row[0])
     
     if row[1] in telemarketers:
         
-        telemarketers.remove(row[1])
+        telemarketers.discard(row[1])
 
-
-print(f"These numbers could be telemarketers:{sorted(telemarketers)}")  
+print(f"These numbers could be telemarketers:")          
+        
+for row in sorted(telemarketers):
+    print(row)

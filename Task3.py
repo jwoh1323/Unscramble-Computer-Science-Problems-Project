@@ -58,7 +58,10 @@ for row in calls:
         elif row[1].startswith("140"):
             area_code.add(row[1])
 
-print(f"The numbers called by people in Bangalore have codes: {sorted(area_code)}")
+print(f"The numbers called by people in Bangalore have codes: ")
+
+for row in sorted(area_code):
+    print(row)
 
 """ Part B: """
 

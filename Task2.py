@@ -35,7 +35,12 @@ for row in calls:
     else:
         g_number[row[1]] = int(row[3])
 
-max_value = max(g_number.values()) 
-max_keys = [k for k, v in g_number.items() if v == max_value]
+max_value = 0
+max_key = ""
 
-print(f"{max_keys} spent the longest time, {max_value} seconds, on the phone during September 2016.")
+for key,value in g_number.items():
+    if value > max_value:
+        max_key = key
+        max_value = value
+
+print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(max_key, max_value))

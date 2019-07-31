@@ -20,10 +20,8 @@ Print messages:
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
 
-f_t = texts[0]
-l_c = calls[-1]
 
-print(f"First record of texts, {f_t[0]} texts {f_t[1]} at time {f_t[2]}")
-print(f"Last record of calls, {l_c[0]} calls {l_c[1]} at time {l_c[2]}, lasting {l_c[3]} seconds")
+print("First record of texts, {} texts {}, at time {}".format(*texts[0]))
+print("Last record of calls, {} calls {}, at time {}, lasting {} seconds".format(*calls[-1]))
 
 

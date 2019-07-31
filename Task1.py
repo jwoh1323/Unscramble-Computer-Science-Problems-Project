@@ -19,20 +19,17 @@ Print a message:
 "There are <count> different telephone numbers in the records."
 """
 
-phone_numbers =[]
+phone_numbers = set()
 
 for row in texts:
     
-    if not row[0] in phone_numbers:
-        phone_numbers.append(row[0])
-    if not row[1] in phone_numbers:
-        phone_numbers.append(row[1])
+    phone_numbers.add(row[0])
+    phone_numbers.add(row[1])
         
-for row2 in calls:
+for row in calls:
     
-    if not row2[0] in phone_numbers:
-        phone_numbers.append(row2[0])
-    if not row2[1] in phone_numbers:
-        phone_numbers.append(row2[1])
+    phone_numbers.add(row[0])
+    phone_numbers.add(row[1])
         
 print(f"There are {len(phone_numbers)} different telephone numbers in the records.")
+        
